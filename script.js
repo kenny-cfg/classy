@@ -16,6 +16,20 @@ const updateTodoListElement = () => {
     if (todo.toUpperCase() === todo) {
       listItem.style.backgroundColor = "red";
     }
+    listItem.addEventListener("mouseenter", () => {
+      listItem.style.fontWeight = "bold";
+      console.log("On mouse enter");
+    })
+    listItem.addEventListener("mouseleave", () => {
+      listItem.style.fontWeight = "";
+    })
+
+
+    /* Old way of defining the function
+    listItem.addEventListener("mouseleave", function() {
+      console.log("On mouse leave")
+    })
+    */
   }
 }
 

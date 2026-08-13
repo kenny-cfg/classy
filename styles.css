@@ -4,6 +4,10 @@ body {
   display: flex;
 }
 
+h1:hover {
+  background-color: aquamarine;
+}
+
 #todo-list {
   list-style-type: none;
 }
