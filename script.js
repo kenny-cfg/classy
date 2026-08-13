@@ -7,6 +7,11 @@ const todoList = [
 
 const updateTodoListElement = () => {
   todoListDiv.innerHTML = "";
+  for (const todo of todoList) {
+    const listItem = document.createElement("li");
+    listItem.textContent = todo;
+    todoListDiv.appendChild(listItem);
+  }
 }
 
 updateTodoListElement();
