@@ -1,4 +1,6 @@
 const todoListDiv = document.getElementById("todo-list");
+const newTodoTextInput = document.getElementById("new-todo-item");
+const submitButton = document.getElementById("submit-todo");
 
 const todoList = [
   "Teach students some OOP",
@@ -15,3 +17,7 @@ const updateTodoListElement = () => {
 }
 
 updateTodoListElement();
+
+submitButton.addEventListener("click", () => {
+  console.log("SUBMIT");
+})
