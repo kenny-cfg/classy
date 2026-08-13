@@ -18,6 +18,15 @@ const updateTodoListElement = () => {
 
 updateTodoListElement();
 
+const enableDisableSubmitButton = () => {
+  const newTodoText = newTodoTextInput.value;
+  if (newTodoText === "" || todoList.includes(newTodoText)) {
+    submitButton.disabled = true;
+  } else {
+    submitButton.disabled = false;
+  }
+}
+
 submitButton.addEventListener("click", () => {
   const newTodoText = newTodoTextInput.value;
   if (todoList.includes(newTodoText)) {
@@ -27,3 +36,9 @@ submitButton.addEventListener("click", () => {
   updateTodoListElement();
   newTodoTextInput.value = "";
 })
+
+newTodoTextInput.addEventListener("keyup", () => {
+  enableDisableSubmitButton();
+})
+
+enableDisableSubmitButton();
