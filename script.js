@@ -25,4 +25,5 @@ submitButton.addEventListener("click", () => {
   }
   todoList.push(newTodoText);
   updateTodoListElement();
+  newTodoTextInput.value = "";
 })
