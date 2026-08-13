@@ -20,6 +20,9 @@ updateTodoListElement();
 
 submitButton.addEventListener("click", () => {
   const newTodoText = newTodoTextInput.value;
+  if (todoList.includes(newTodoText)) {
+    return;
+  }
   todoList.push(newTodoText);
   updateTodoListElement();
 })
