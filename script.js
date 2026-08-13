@@ -13,6 +13,9 @@ const updateTodoListElement = () => {
     const listItem = document.createElement("li");
     listItem.textContent = todo;
     todoListDiv.appendChild(listItem);
+    if (todo.toUpperCase() === todo) {
+      listItem.style.backgroundColor = "red";
+    }
   }
 }
 
@@ -35,7 +38,6 @@ const submitNewTodo = () => {
   todoList.push(newTodoText);
   updateTodoListElement();
   newTodoTextInput.value = "";
- 
 }
 
 submitButton.addEventListener("click", () => submitNewTodo())
