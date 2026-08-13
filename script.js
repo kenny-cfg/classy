@@ -5,5 +5,8 @@ const todoList = [
   "Tell my child off"
 ]
 
+const updateTodoListElement = () => {
+  todoListDiv.innerHTML = "";
+}
 
-todoListDiv.textContent = "POO";
+updateTodoListElement();
