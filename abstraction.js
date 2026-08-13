@@ -11,3 +11,15 @@ information for each type, e.g “This is an electric/petrol car”.
 3. Override the estimate_range method to customise behavior for
 electric cars.
 */
+
+class Vehicle {
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+  
+  displayVehicleInfo() {
+    throw new Error("Not implemented, idiot");
+  }
+}
