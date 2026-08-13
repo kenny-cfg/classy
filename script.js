@@ -27,17 +27,23 @@ const enableDisableSubmitButton = () => {
   }
 }
 
-submitButton.addEventListener("click", () => {
-  const newTodoText = newTodoTextInput.value;
+const submitNewTodo = () => {
+   const newTodoText = newTodoTextInput.value;
   if (todoList.includes(newTodoText)) {
     return;
   }
   todoList.push(newTodoText);
   updateTodoListElement();
   newTodoTextInput.value = "";
-})
+ 
+}
 
-newTodoTextInput.addEventListener("keyup", () => {
+submitButton.addEventListener("click", () => submitNewTodo())
+
+newTodoTextInput.addEventListener("keyup", event => {
+  if (event.key === "Enter") {
+    submitNewTodo();
+  }
   enableDisableSubmitButton();
 })
 
