@@ -23,3 +23,41 @@ class Vehicle {
     throw new Error("Not implemented, idiot");
   }
 }
+
+class Car extends Vehicle {
+  constructor(make, model, year) {
+    super(make, model, year);
+  }
+
+  displayCarInfo() {
+    return `This car is a ${this.year} ${this.make} ${this.model}`;
+  }
+  
+  displayVehicleInfo() {
+    return "This is a petrol car";
+  }
+}
+
+class ElectricCar extends Vehicle {
+  constructor(make, model, year, batteryCapacity) {
+    super(make, model, year);
+    this.batteryCapacity = batteryCapacity;
+  }
+  
+  estimateRange() {
+    return `This car has estimated range of ${this.batteryCapacity * 50}`;
+  }
+  
+  displayVehicleInfo() {
+    return "This is an electric car";
+  }
+}
+
+const electricCar = new ElectricCar("Kenco", "Ken-Tric 2000", "2093", 50);
+const petrolCar = new Car("BYD", "Some Car", 2100);
+
+const allCars = [electricCar, petrolCar];
+
+for (const car of allCars) {
+  console.log(car.displayVehicleInfo());
+}
