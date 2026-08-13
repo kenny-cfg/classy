@@ -19,5 +19,7 @@ const updateTodoListElement = () => {
 updateTodoListElement();
 
 submitButton.addEventListener("click", () => {
-  console.log("SUBMIT");
+  const newTodoText = newTodoTextInput.value;
+  todoList.push(newTodoText);
+  updateTodoListElement();
 })
